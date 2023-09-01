@@ -1,0 +1,7 @@
+<h1 class="headding">BUSQUEDA POR PAIS</h1>
+<shared-search-box
+  (onValue)="searchByCountry($event)"
+  [initialValue]="initialValueTerm"
+></shared-search-box>
+<countries-table [countries]="countries"></countries-table>
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>

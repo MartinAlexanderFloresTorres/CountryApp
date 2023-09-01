@@ -1,0 +1,131 @@
+.country {
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.center p {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+.country h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.country__enlace {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background: #0091df;
+  padding: 8px 18px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease box-shadow;
+  margin-bottom: 10px;
+}
+.country__enlace:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.country__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .country__top {
+    grid-template-columns: 1fr;
+  }
+}
+.country__top img {
+  width: 100%;
+}
+
+.country__info {
+  width: 100%;
+}
+.country__flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.country__flex p {
+  flex: auto;
+  text-align: center;
+}
+.country__info p {
+  font-weight: 700;
+  background: #fff;
+  cursor: #020202;
+  border-radius: 10px;
+  padding: 6px 16px;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.country__info p strong {
+  font-weight: 600;
+}
+.country__codigo {
+  width: fit-content;
+  background: #0091df;
+  color: #fff;
+  border-radius: 15px;
+  padding: 6px 16px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.country__grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+.card-flex {
+  flex: auto;
+  border: 1px solid #0091df;
+}
+.card-flex h3 {
+  background: #0091df;
+  color: #fff;
+  padding: 6px 16px;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+.card-flex div {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.card-flex p {
+  background: #0091df;
+  color: #fff;
+  border-radius: 15px;
+  padding: 6px 16px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

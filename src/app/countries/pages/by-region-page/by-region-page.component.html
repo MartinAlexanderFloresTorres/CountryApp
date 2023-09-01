@@ -1,0 +1,16 @@
+<h1 class="headding">BUSQUEDA POR REGION</h1>
+
+<div class="regiones">
+  <button
+    *ngFor="let region of regions"
+    (click)="searchByRegion(region)"
+    [ngClass]="{
+      active: region === activeRegion
+    }"
+  >
+    {{ region }}
+  </button>
+</div>
+
+<countries-table [countries]="countries"></countries-table>
+<shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>

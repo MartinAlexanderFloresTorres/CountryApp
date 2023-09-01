@@ -1,0 +1,89 @@
+<ng-template #loading>
+  <shared-loading-spinner></shared-loading-spinner>
+  <div class="center">
+    <p>Espera un momento...</p>
+  </div>
+</ng-template>
+
+<div class="country" *ngIf="country; else loading">
+  <a class="country__enlace" routerLink="countries/by-region">Regresar</a>
+
+  <h1>
+    Pais: <strong>{{ country.name.common }}</strong>
+  </h1>
+
+  <div class="country__top">
+    <img width="100" [src]="country.flags.svg" [alt]="country.flags.alt" />
+    <div class="country__info">
+      <div class="country__codigo">
+        Código: <strong>{{ country.cca3 }}</strong>
+      </div>
+
+      <div class="country__flex">
+        <p>
+          Nombre Común: <strong>{{ country.name.common }}</strong>
+        </p>
+
+        <p>
+          Nombre Oficial:
+          <strong>{{ country.name.official }}</strong>
+        </p>
+
+        <p>
+          Capital: <strong>{{ country.capital }}</strong>
+        </p>
+
+        <p>
+          Región: <strong>{{ country.region }}</strong>
+
+          <span *ngIf="country.subregion">
+            - <strong>{{ country.subregion }}</strong>
+          </span>
+        </p>
+
+        <p>
+          Latitud: <strong>{{ country.latlng[0] }}</strong>
+        </p>
+
+        <p>
+          Longitud: <strong>{{ country.latlng[1] }}</strong>
+        </p>
+
+        <p>
+          Área: <strong>{{ country.area | number }}</strong>
+        </p>
+
+        <p>
+          Población: <strong>{{ country.population | number }}</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="country__grid">
+    <div class="card-flex">
+      <h3>Traducciones</h3>
+      <div>
+        <p *ngFor="let translation of country.translations | keyvalue">
+          {{ translation.key }}: <strong>{{ translation.value.common }}</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="card-flex">
+      <h3>Lenguages</h3>
+      <div>
+        <p *ngFor="let language of country.languages | keyvalue">
+          {{ language.key }}: <strong>{{ language.value }}</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="card-flex">
+      <h3>Continentes</h3>
+      <div>
+        <p *ngFor="let continent of country.continents">{{ continent }}</p>
+      </div>
+    </div>
+  </div>
+</div>

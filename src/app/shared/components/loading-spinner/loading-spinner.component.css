@@ -1,0 +1,19 @@
+.loading-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  background-color: #090909;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  padding: 5px 10px 5px 18px;
+  border-radius: 18px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.loading-container span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
